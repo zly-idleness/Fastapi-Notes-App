@@ -1,3 +1,4 @@
+from src.routes import notes, users
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from tortoise import Tortoise
@@ -7,6 +8,8 @@ from src.database.config import TORTOISE_ORM
 
 # enable schemas to read relationship between models
 Tortoise.init_models(["src.database.models"], "models")
+
+# notice the order of the imports and init_model
 
 app = FastAPI()
 
@@ -20,6 +23,10 @@ app.add_middleware(
 
 
 register_tortoise(app, config=TORTOISE_ORM, generate_schemas=False)
+
+
+app.include_router(users.router)
+app.include_router(notes.router)
 
 
 @app.get("/")
