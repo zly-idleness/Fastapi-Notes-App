@@ -98,10 +98,16 @@
    ©À©¤©¤ ProfileView.vue
    ©¸©¤©¤ RegisterView.vue
 ```
+
+# Todo
+- Add markdown support
+- Spiced up the appearance
+- Fix some bugs(yes, it still have some tedious bugs)
+
 # Reference
 [fastapi-vue by Michael Herman](https://github.com/testdrivenio/fastapi-vue)  
 
-Thanks to these guy, my app is mostly developed within their tutorial.
+Thanks to these guys, my app was largely developed following their tutorial.
 
 Also, thanks to ChatGPT, it has worked hard and provided perfect assistance, writing a lot of code for me.
 
