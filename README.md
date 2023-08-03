@@ -6,6 +6,13 @@
 
 - Well , maybe also for learning some basic web development skills
 
+# Usage
+In fastapi-vue
+
+```shell
+docker-compose up -d --build 
+```
+Click [localhost:8080](http://localhost:8080/) to view the page.
 
 # Structure
 
