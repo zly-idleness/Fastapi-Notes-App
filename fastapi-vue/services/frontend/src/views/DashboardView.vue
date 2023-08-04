@@ -12,19 +12,24 @@
                     <label for="content" class="form-label">Content:</label>
                     <textarea name="content" v-model="form.content" class="form-control"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="form-group" style="margin-top: 20px;">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
             </form>
         </section>
 
         <section class="notes-section">
             <h1>Notes</h1>
             <hr />
-            <div v-if="notes.length">
+            <div v-if="notes && notes.length" class="notes-grid">
                 <div v-for="note in notes" :key="note.id" class="note-card">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
+                            <div class="note-content">
+                                <p class="note-title"><strong>Note Title:</strong> {{ note.title }}</p>
+                                <p>{{ note.content }}</p>
+                            </div>
                             <ul>
-                                <li><strong>Note Title:</strong> {{ note.title }}</li>
                                 <li><strong>Author:</strong> {{ note.author.username }}</li>
                                 <li><router-link :to="{ name: 'Note', params: { id: note.id } }">View</router-link></li>
                             </ul>
@@ -33,7 +38,7 @@
                 </div>
             </div>
             <div v-else>
-                <p>Nothing to see. Check back later.</p>
+                <p>No notes available. Check back later.</p>
             </div>
         </section>
     </div>
@@ -75,7 +80,7 @@ export default defineComponent({
 
 .add-note-section,
 .notes-section {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .form-label {
@@ -91,10 +96,55 @@ export default defineComponent({
 
 .btn-primary {
     width: 100%;
+    background-color: #FF5733;
+    border-color: #FF5733;
+    font-size: 16px;
+    /* Increase button font size */
+    padding: 10px 20px;
+    /* Add padding to the button */
+}
+
+.btn-primary:hover {
+    background-color: #E63900;
+    border-color: #E63900;
+}
+
+
+.note-title {
+    font-size: 18px;
+    /* Increase title font size */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.note-content {
+    font-size: 18px;
+    font-weight: bold;
+    /* Increase content font size */
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-gap: 10px;
 }
 
 .note-card {
     margin-bottom: 20px;
+    background-color: #F3F3F3;
+    /* Light gray background for note cards */
+    border: 1px solid #DDD;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 </style>
   

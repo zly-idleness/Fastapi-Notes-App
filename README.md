@@ -109,7 +109,7 @@ Click [localhost:8080](http://localhost:8080/) to view the page.
 # Todo
 - Add markdown support
 - Spiced up the appearance
-- Fix some bugs(yes, it still have some tedious bugs)
+- ~~Fix some bugs(yes, it still have some tedious bugs)~~
 
 # Reference
 [fastapi-vue by Michael Herman](https://github.com/testdrivenio/fastapi-vue)  

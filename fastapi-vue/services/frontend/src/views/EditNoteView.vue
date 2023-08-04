@@ -1,18 +1,20 @@
 <template>
-    <section>
-        <h1>Edit note</h1>
+    <section class="edit-note-section">
+        <h1>Edit Note</h1>
         <hr /><br />
 
-        <form @submit.prevent="submit">
+        <form @submit.prevent="submit" class="edit-note-form">
             <div class="mb-3">
                 <label for="title" class="form-label">Title:</label>
                 <input type="text" name="title" v-model="form.title" class="form-control" />
             </div>
             <div class="mb-3">
                 <label for="content" class="form-label">Content:</label>
-                <textarea name="content" v-model="form.content" class="form-control"></textarea>
+                <textarea name="content" v-model="form.content" class="form-control edit-note-content"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="mb-4">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </form>
     </section>
 </template>
@@ -65,24 +67,19 @@ export default defineComponent({
     },
 });
 </script>
-  
 <style scoped>
-.edit-note {
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+.edit-note-section {
+    margin-top: 40px;
+    /* Add space from the NavBar */
 }
 
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+.edit-note-form {
+    margin-top: 20px;
+    /* Add space between form sections */
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004d9a;
+.edit-note-content {
+    height: 200px;
+    /* Adjust textarea height as needed */
 }
 </style>
-  

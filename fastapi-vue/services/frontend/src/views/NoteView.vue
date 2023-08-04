@@ -1,25 +1,25 @@
 <template>
     <div class="note-view">
-        <div v-if="note">
-            <p><strong>Title:</strong> {{ note.title }}</p>
-            <p><strong>Content:</strong> {{ note.content }}</p>
-            <p><strong>Author:</strong> {{ note.author.username }}</p>
+        <div class="note-details">
+            <div v-if="note">
+                <p class="note-detail"><strong>Title:</strong> {{ note.title }}</p>
+                <p class="note-detail"><strong>Content:</strong> {{ note.content }}</p>
+                <p class="note-detail"><strong>Author:</strong> {{ note.author.username }}</p>
 
-            <div v-if="user.id === note.author.id">
-                <p>
+                <div v-if="user.id === note.author.id" class="note-actions">
                     <router-link :to="{ name: 'EditNote', params: { id: note.id } }" class="btn btn-primary">
                         Edit
                     </router-link>
-                </p>
-                <p>
                     <button @click="removeNote()" class="btn btn-secondary">
                         Delete
                     </button>
-                </p>
+                </div>
             </div>
         </div>
     </div>
 </template>
+  
+
   
   
 <script>
@@ -54,4 +54,27 @@ export default defineComponent({
 });
 </script>
   
+<style scoped>
+.note-view {
+    margin-top: 100px;
+    /* Add more space from the NavBar */
+}
+
+.note-details {
+    margin-top: 20px;
+    /* Add space between items */
+}
+
+.note-detail {
+    margin-bottom: 10px;
+    /* Add space below each item */
+}
+
+.note-actions {
+    margin-top: 20px;
+    /* Add space above action buttons */
+}
+</style>
+
+
   
