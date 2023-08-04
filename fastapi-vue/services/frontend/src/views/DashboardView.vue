@@ -23,16 +23,18 @@
             <hr />
             <div v-if="notes && notes.length" class="notes-grid">
                 <div v-for="note in notes" :key="note.id" class="note-card">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <div class="card-body">
                             <div class="note-content">
-                                <p class="note-title"><strong>Note Title:</strong> {{ note.title }}</p>
-                                <p>{{ note.content }}</p>
+                                <h4 class="note-title">{{ note.title }}</h4>
+                                <p class="note-text">{{ truncateContent(note.content) }}</p>
                             </div>
-                            <ul>
-                                <li><strong>Author:</strong> {{ note.author.username }}</li>
-                                <li><router-link :to="{ name: 'Note', params: { id: note.id } }">View</router-link></li>
-                            </ul>
+                            <div class="note-details">
+                                <ul>
+                                    <li><strong>Author:</strong> {{ note.author.username }}</li>
+                                    <li><router-link :to="{ name: 'Note', params: { id: note.id } }">View</router-link></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -43,6 +45,8 @@
         </section>
     </div>
 </template>
+  
+
   
 <script>
 import { defineComponent } from 'vue';
@@ -69,6 +73,12 @@ export default defineComponent({
         async submit() {
             await this.createNote(this.form);
         },
+        truncateContent(content) {
+            if (content.length > 40) {
+                return content.substring(0, 40) + ' ...';
+            }
+            return content;
+        },
     },
 });
 </script>
@@ -81,6 +91,12 @@ export default defineComponent({
 .add-note-section,
 .notes-section {
     margin-bottom: 20px;
+}
+
+.note-content-preview {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #888;
 }
 
 .form-label {

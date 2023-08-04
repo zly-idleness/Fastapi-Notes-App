@@ -118,3 +118,19 @@ Thanks to these guys, my app was largely developed following their tutorial.
 
 Also, thanks to ChatGPT, it has worked hard and provided perfect assistance, writing a lot of code for me.
 
+# Examples Graph
+## Home View
+![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.50.02.png)
+## Register
+![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%889.00.07.png)
+## Login
+![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.50.15.png)
+## Dashboard
+![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.51.02.png)
+## EditNote
+![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.51.22.png)
+## NoteView
+![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.59.50.png)
+## PersonalProfile
+![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.51.32.png)
+
