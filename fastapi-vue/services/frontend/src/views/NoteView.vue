@@ -34,7 +34,7 @@ import { defineComponent } from 'vue';
 import { mapGetters, mapActions } from 'vuex';
 
 export default defineComponent({
-    name: 'Note',
+    name: 'Note-layout',
     props: ['id'],
     async created() {
         try {

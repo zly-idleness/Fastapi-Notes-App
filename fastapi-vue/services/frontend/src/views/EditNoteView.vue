@@ -10,7 +10,9 @@
             </div>
             <div class="mb-3">
                 <label for="content" class="form-label">Content:</label>
-                <textarea name="content" v-model="form.content" class="form-control edit-note-content"></textarea>
+                <div class="editor-container">
+                    <md-editor v-model="form.content" />
+                </div>
             </div>
             <div class="mb-4">
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -23,8 +25,12 @@
 import { defineComponent } from 'vue';
 import { mapGetters, mapActions } from 'vuex';
 
+import MdEditor from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+
 export default defineComponent({
     name: 'EditNote',
+    components: { MdEditor },
     props: ['id'],
     data() {
         return {
@@ -76,6 +82,29 @@ export default defineComponent({
 .edit-note-form {
     margin-top: 20px;
     /* Add space between form sections */
+}
+
+.md-editor-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.md-editor-toolbar {
+    background-color: #f5f5f5;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+}
+
+.md-editor-content {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+.md-editor-preview {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 5px 5px;
 }
 
 .edit-note-content {

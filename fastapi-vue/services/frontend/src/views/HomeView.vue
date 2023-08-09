@@ -14,7 +14,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Home',
+  name: 'Home-layout',
   data() {
     return {
       customText: 'Your custom text goes here!',

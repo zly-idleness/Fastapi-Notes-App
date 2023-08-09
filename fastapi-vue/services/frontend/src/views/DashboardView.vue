@@ -53,7 +53,7 @@ import { defineComponent } from 'vue';
 import { mapGetters, mapActions } from 'vuex';
 
 export default defineComponent({
-    name: 'Dashboard',
+    name: 'Dashboard-layout',
     data() {
         return {
             form: {
