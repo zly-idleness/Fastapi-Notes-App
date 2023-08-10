@@ -1,35 +1,35 @@
 <template>
-    <section class="edit-note-section">
-        <h1>Edit Note</h1>
-        <hr /><br />
-
-        <form @submit.prevent="submit" class="edit-note-form">
-            <div class="mb-3">
-                <label for="title" class="form-label">Title:</label>
-                <input type="text" name="title" v-model="form.title" class="form-control" />
-            </div>
-            <div class="mb-3">
-                <label for="content" class="form-label">Content:</label>
-                <div class="editor-container">
-                    <md-editor v-model="form.content" />
-                </div>
-            </div>
-            <div class="mb-4">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
-    </section>
+    <form @submit.prevent="submit" class="edit-note-form">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" name="title" v-model="form.title" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <MdEditor previewTheme=smart-blue v-model="form.content" :sanitize="sanitize" />
+        </div>
+        <div class="mb-4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
 </template>
+  
+<script setup>
+import sanitizeHtml from 'sanitize-html';
+import { MdEditor } from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+
+const sanitize = (html) => {
+    return sanitizeHtml(html);
+};
+</script>
   
 <script>
 import { defineComponent } from 'vue';
 import { mapGetters, mapActions } from 'vuex';
 
-import MdEditor from 'md-editor-v3';
-import 'md-editor-v3/lib/style.css';
 
 export default defineComponent({
-    name: 'EditNote',
+    name: 'EditNote-layout',
     components: { MdEditor },
     props: ['id'],
     data() {
@@ -73,42 +73,4 @@ export default defineComponent({
     },
 });
 </script>
-<style scoped>
-.edit-note-section {
-    margin-top: 40px;
-    /* Add space from the NavBar */
-}
 
-.edit-note-form {
-    margin-top: 20px;
-    /* Add space between form sections */
-}
-
-.md-editor-container {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.md-editor-toolbar {
-    background-color: #f5f5f5;
-    border-radius: 5px 5px 0 0;
-    padding: 5px 10px;
-}
-
-.md-editor-content {
-    border-top: 1px solid #ccc;
-    padding: 10px;
-}
-
-.md-editor-preview {
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 0 0 5px 5px;
-}
-
-.edit-note-content {
-    height: 200px;
-    /* Adjust textarea height as needed */
-}
-</style>

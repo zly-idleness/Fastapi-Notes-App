@@ -10,7 +10,9 @@
                 </div>
                 <div class="form-group">
                     <label for="content" class="form-label">Content:</label>
-                    <textarea name="content" v-model="form.content" class="form-control"></textarea>
+                    <div class="mb-3">
+                        <MdEditor previewTheme=smart-blue v-model="form.content" />
+                    </div>
                 </div>
                 <div class="form-group" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -26,8 +28,8 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="note-content">
-                                <h4 class="note-title">{{ note.title }}</h4>
-                                <p class="note-text">{{ truncateContent(note.content) }}</p>
+                                <h2 class="note-title">{{ note.title }}</h2>
+
                             </div>
                             <div class="note-details">
                                 <ul>
@@ -46,6 +48,12 @@
     </div>
 </template>
   
+
+<script setup>
+import { MdEditor } from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+
+</script>
 
   
 <script>
@@ -88,7 +96,8 @@ export default defineComponent({
     padding: 20px;
 }
 
-.add-note-section,
+.add-note-section {}
+
 .notes-section {
     margin-bottom: 20px;
 }

@@ -15,20 +15,24 @@
                         </button>
                     </div>
                 </div>
-
-                <div class="note-content-card">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="note-content">{{ note.content }}</p>
-                        </div>
-                    </div>
+                <div>
+                    <MdPreview previewTheme=smart-blue :editorId="id" :modelValue="note.content" />
                 </div>
+
             </div>
         </div>
     </div>
 </template>
   
-  
+
+<script setup>
+import { MdPreview } from 'md-editor-v3';
+import 'md-editor-v3/lib/preview.css';
+
+const id = 'preview';
+
+</script>
+
 <script>
 import { defineComponent } from 'vue';
 import { mapGetters, mapActions } from 'vuex';
