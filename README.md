@@ -83,7 +83,7 @@ Click [localhost:8080](http://localhost:8080/) to view the page.
 .
 ├── App.vue
 ├── assets
-│  ├── logo-w.png
+│  ├── logo-b.png
 │  └── logo.png
 ├── components
 │  ├── HelloWorld.vue
@@ -107,11 +107,13 @@ Click [localhost:8080](http://localhost:8080/) to view the page.
 ```
 
 # Todo
-- Add markdown support
-- Spiced up the appearance
+
+- ~~Add markdown support~~
+- ~~Spiced up the appearance~~
 - ~~Fix some bugs(yes, it still have some tedious bugs)~~
 
 # Reference
+
 [fastapi-vue by Michael Herman](https://github.com/testdrivenio/fastapi-vue)  
 
 Thanks to these guys, my app was largely developed following their tutorial.
@@ -120,17 +122,30 @@ Also, thanks to ChatGPT, it has worked hard and provided perfect assistance, wri
 
 # Examples Graph
 ## Home View
-![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.50.02.png)
+
+![Screenshot 2023-08-11 at 20-05-42 frontend](example/Screenshot 2023-08-11 at 20-05-42 frontend.png)
+
 ## Register
-![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%889.00.07.png)
+
+![Screenshot 2023-08-11 at 20-07-24 frontend](example/Screenshot 2023-08-11 at 20-07-24 frontend.png)
+
 ## Login
-![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.50.15.png)
+
+![Screenshot 2023-08-11 at 20-07-32 frontend](example/Screenshot 2023-08-11 at 20-07-32 frontend.png)
+
 ## Dashboard
-![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.51.02.png)
+
+![Screenshot 2023-08-11 at 20-06-17 frontend](example/Screenshot 2023-08-11 at 20-06-17 frontend.png)
+
 ## EditNote
-![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.51.22.png)
-## NoteView
-![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.59.50.png)
+
+![Screenshot 2023-08-11 at 20-06-46 frontend](example/Screenshot 2023-08-11 at 20-06-46 frontend.png)
+
+## NoteView![Screenshot 2023-08-11 at 20-06-34 frontend](example/Screenshot 2023-08-11 at 20-06-34 frontend.png)
+
+
+
 ## PersonalProfile
-![Alt text](example/%E6%88%AA%E5%B1%8F2023-08-04%20%E4%B8%8B%E5%8D%888.51.32.png)
+
+![Screenshot 2023-08-11 at 20-07-10 frontend](example/Screenshot 2023-08-11 at 20-07-10 frontend.png)
 
