@@ -120,7 +120,7 @@ Thanks to these guys, my app was largely developed following their tutorial.
 
 Also, thanks to ChatGPT, it has worked hard and provided perfect assistance, writing a lot of code for me.
 
-# Examples Graph
+# Examples Photos
 ## Home View
 
 ![Alt text](example/Screenshot%202023-08-11%20at%2020-05-42%20frontend.png)
