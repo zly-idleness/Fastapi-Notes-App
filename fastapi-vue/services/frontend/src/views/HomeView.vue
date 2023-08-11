@@ -17,7 +17,7 @@ export default defineComponent({
   name: 'Home-layout',
   data() {
     return {
-      customText: 'Your custom text goes here!',
+      customText: 'Reach me at zly.idleness@gmail.com!',
     };
   },
 });

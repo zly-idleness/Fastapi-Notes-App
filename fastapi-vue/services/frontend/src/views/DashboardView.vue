@@ -11,7 +11,7 @@
                 <div class="form-group">
                     <label for="content" class="form-label">Content:</label>
                     <div class="mb-3">
-                        <MdEditor class="left-aligned-editor" previewTheme=smart-blue v-model="form.content" />
+                        <MdEditor class="left-aligned-editor" previewTheme=vuepress v-model="form.content" />
                     </div>
                 </div>
                 <div class="form-group" style="margin-top: 20px;">
@@ -96,7 +96,13 @@ export default defineComponent({
     padding: 20px;
 }
 
-.add-note-section {}
+.form-control {
+    width: 100%;
+    font-weight: bold;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
 
 .notes-section {
     margin-bottom: 20px;
@@ -121,8 +127,8 @@ export default defineComponent({
 
 .btn-primary {
     width: 100%;
-    background-color: #FF5733;
-    border-color: #FF5733;
+    background-color: #9bc9bf;
+    border-color: #64b8b4;
     font-size: 16px;
     /* Increase button font size */
     padding: 10px 20px;
@@ -130,8 +136,8 @@ export default defineComponent({
 }
 
 .btn-primary:hover {
-    background-color: #E63900;
-    border-color: #E63900;
+    background-color: #4fa68f;
+    border-color: #4098a2;
 }
 
 
@@ -165,6 +171,8 @@ export default defineComponent({
 }
 
 .left-aligned-editor {
+    background-color: rgb(232, 246, 240);
+    padding: 20px;
     text-align: left;
 }
 

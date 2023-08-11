@@ -5,7 +5,7 @@
             <input type="text" name="title" v-model="form.title" class="form-control" />
         </div>
         <div class="mb-3">
-            <MdEditor class="left-aligned-editor" previewTheme=smart-blue v-model="form.content" :sanitize="sanitize" />
+            <MdEditor class="left-aligned-editor" previewTheme=vuepress v-model="form.content" :sanitize="sanitize" />
         </div>
         <div class="mb-4">
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -75,6 +75,16 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.form-control {
+    font-weight: bold;
+}
+
+.mb-3 {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .left-aligned-editor {
     text-align: left;
 }

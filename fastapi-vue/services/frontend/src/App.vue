@@ -23,6 +23,16 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #072f59;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #dae8e6;
+  /* Adjust the path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 </style>

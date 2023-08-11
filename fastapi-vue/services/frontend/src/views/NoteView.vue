@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div>
-                    <MdPreview class="left-aligned-editor" previewTheme=smart-blue :editorId="id"
+                    <MdPreview class="left-aligned-editor" previewTheme=vuepress :editorId="id"
                         :modelValue="note.content" />
                 </div>
 
@@ -68,8 +68,19 @@ export default defineComponent({
   
 <style scoped>
 .note-view {
-    margin-top: 100px;
+    padding: 20px;
+    margin-top: 40px;
     /* Add more space from the NavBar */
+}
+
+.note-summary {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    /* Add space below summary */
 }
 
 .note-details {
@@ -83,11 +94,14 @@ export default defineComponent({
 }
 
 .note-actions {
+    padding: 20px;
     margin-top: 20px;
     /* Add space above action buttons */
 }
 
 .left-aligned-editor {
+    background-color: rgb(170, 223, 199);
+    padding: 20px;
     text-align: left;
 }
 </style>
