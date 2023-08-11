@@ -5,7 +5,7 @@
             <input type="text" name="title" v-model="form.title" class="form-control" />
         </div>
         <div class="mb-3">
-            <MdEditor previewTheme=smart-blue v-model="form.content" :sanitize="sanitize" />
+            <MdEditor class="left-aligned-editor" previewTheme=smart-blue v-model="form.content" :sanitize="sanitize" />
         </div>
         <div class="mb-4">
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -74,3 +74,8 @@ export default defineComponent({
 });
 </script>
 
+<style scoped>
+.left-aligned-editor {
+    text-align: left;
+}
+</style>

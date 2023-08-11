@@ -16,7 +16,8 @@
                     </div>
                 </div>
                 <div>
-                    <MdPreview previewTheme=smart-blue :editorId="id" :modelValue="note.content" />
+                    <MdPreview class="left-aligned-editor" previewTheme=smart-blue :editorId="id"
+                        :modelValue="note.content" />
                 </div>
 
             </div>
@@ -85,32 +86,9 @@ export default defineComponent({
     margin-top: 20px;
     /* Add space above action buttons */
 }
-</style>
 
-
-
-
-
-
-<style scoped>
-.note-content-card {
-    margin-top: 20px;
-}
-
-.card {
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.card-body {
-    padding: 20px;
-}
-
-.note-content {
-    font-size: 16px;
-    line-height: 1.6;
+.left-aligned-editor {
+    text-align: left;
 }
 </style>
   

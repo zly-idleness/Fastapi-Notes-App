@@ -11,7 +11,7 @@
                 <div class="form-group">
                     <label for="content" class="form-label">Content:</label>
                     <div class="mb-3">
-                        <MdEditor previewTheme=smart-blue v-model="form.content" />
+                        <MdEditor class="left-aligned-editor" previewTheme=smart-blue v-model="form.content" />
                     </div>
                 </div>
                 <div class="form-group" style="margin-top: 20px;">
@@ -162,6 +162,10 @@ export default defineComponent({
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-aligned-editor {
+    text-align: left;
 }
 
 .card {
