@@ -123,29 +123,26 @@ Also, thanks to ChatGPT, it has worked hard and provided perfect assistance, wri
 # Examples Graph
 ## Home View
 
-![Screenshot 2023-08-11 at 20-05-42 frontend](example/Screenshot 2023-08-11 at 20-05-42 frontend.png)
+![Alt text](example/Screenshot%202023-08-11%20at%2020-05-42%20frontend.png)
 
 ## Register
-
-![Screenshot 2023-08-11 at 20-07-24 frontend](example/Screenshot 2023-08-11 at 20-07-24 frontend.png)
+![Alt text](example/Screenshot%202023-08-11%20at%2020-07-24%20frontend.png)
 
 ## Login
-
-![Screenshot 2023-08-11 at 20-07-32 frontend](example/Screenshot 2023-08-11 at 20-07-32 frontend.png)
+![Alt text](example/Screenshot%202023-08-11%20at%2020-07-32%20frontend.png)
 
 ## Dashboard
 
-![Screenshot 2023-08-11 at 20-06-17 frontend](example/Screenshot 2023-08-11 at 20-06-17 frontend.png)
+![Alt text](example/Screenshot%202023-08-11%20at%2020-06-17%20frontend.png)
+
+## NoteView
+![Alt text](example/Screenshot%202023-08-11%20at%2020-06-34%20frontend.png)
 
 ## EditNote
-
-![Screenshot 2023-08-11 at 20-06-46 frontend](example/Screenshot 2023-08-11 at 20-06-46 frontend.png)
-
-## NoteView![Screenshot 2023-08-11 at 20-06-34 frontend](example/Screenshot 2023-08-11 at 20-06-34 frontend.png)
+![Alt text](example/Screenshot%202023-08-11%20at%2020-06-46%20frontend.png)
 
 
 
 ## PersonalProfile
 
-![Screenshot 2023-08-11 at 20-07-10 frontend](example/Screenshot 2023-08-11 at 20-07-10 frontend.png)
-
+![Alt text](example/Screenshot%202023-08-11%20at%2020-07-10%20frontend.png)
